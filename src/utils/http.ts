@@ -2,7 +2,7 @@ import axios, { AxiosError, HttpStatusCode, type AxiosInstance } from "axios";
 import { toast } from "react-toastify";
 import { URL_BASE } from "../constants/endpoints";
 class Http {
-  private accessToken: string;
+  //private accessToken: string;
   // private refreshToken: string;
   // private refreshTokenRequest: Promise<string> | null;
   public instance: AxiosInstance;
@@ -22,12 +22,12 @@ class Http {
 
     this.instance.interceptors.request.use(
       (config) => {
-        this.accessToken = "abc";
-        if (this.accessToken && config.headers) {
-          config.headers.Authorization = `Bearer ${this.accessToken}`;
-          console.log(config.headers);
-          console.log(config.data);
-        }
+        // this.accessToken = "abc";
+        // if (this.accessToken && config.headers) {
+        //   config.headers.Authorization = `Bearer ${this.accessToken}`;
+        //   console.log(config.headers);
+        //   console.log(config.data);
+        // }
         return config;
       },
       (error: AxiosError) => {
