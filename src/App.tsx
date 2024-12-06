@@ -1,6 +1,8 @@
-import useRouteElement from "./useRouteElement";
-
+import FraudPrediction from "./FraudPrediction";
 export default function App() {
-  const routeElement = useRouteElement();
-  return <div>{routeElement}</div>;
+  return (
+    <div>
+      <FraudPrediction />
+    </div>
+  );
 }
